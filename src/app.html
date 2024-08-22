@@ -10,3 +10,47 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+
+<style>
+	/* basics */
+
+
+	#repos-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+		justify-content: center;
+
+	}
+
+	.repository{
+		background: var(--lightGrey);
+		padding: 2em;
+		width: 400px;
+		border-radius: 1em;
+		display: grid;
+			grid:
+				"title" 0.5fr
+				"bio" 1fr
+				"button" 0.5fr
+				/ 1fr;
+			gap: 10px;
+	}
+
+	.repository h3 {
+		color: var(--darkPink); !important
+		grid-area: title;
+	}
+
+	.repo-bio {
+
+		grid-area: bio;
+	}
+
+	.repo-button {
+		padding-top: 1em;
+		grid-area: button;
+		color: var(--lightGrey);
+		font-weight: 500;
+	}
+</style>

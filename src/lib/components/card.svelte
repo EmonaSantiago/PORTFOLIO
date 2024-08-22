@@ -1,3 +1,64 @@
+<script>
+
+  import { onMount } from 'svelte';
+
+
+
+onMount(() => {
+
+		// GitHub API laat maar 30 zien bij default
+		// Verander username
+			const apiUrl = `https://api.github.com/users/EmonaSantiago/repos?sort=updated&per_page=50`;
+
+	
+	fetch(apiUrl)
+		.then((response) => response.json())
+		.then((repos) => {
+			repos = repos.map((repo) => {
+				return {
+					...repo,
+					name: repo.name.replace(/-/g, ' ') // deze line zorgt ervoor dat er spaties staan ipv - 
+				};
+			});
+
+				// Haal de volgende regel weg om alle repo's te krijgen op de website, wil je dit niet dan kan je de beste repo's een ster
+				// geven zodat je alleen die ziet :) 
+
+			repos = repos.filter((repo) => repo.stargazers_count > 0);
+
+			// Sorteert het werk van hoog naar laag ster
+
+			repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+			const container = document.getElementById('repos-container');
+			repos.forEach((repo) => {
+				const repository = document.createElement('section');
+				repository.className = 'repository';
+				repository.innerHTML = `
+				
+				
+					<h3><a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a></h3>
+					
+					<section class="repo-bio">
+						<p>${repo.description || 'No description available.'} </p>
+					</section>
+
+					<section class="repo-button">
+						<a href="${repo.homepage}" target="_blank" class="live-button"> ${"Live Site" || 'no link available'} </a>
+					</section>
+				
+
+				
+				`;
+				container.appendChild(repository);
+			});
+		})
+		.catch((error) => console.error('Error fetching repos:', error));
+});
+
+
+</script>
+
 <ul class="cards">
     <li>
       <a href="/" class="card">
@@ -14,81 +75,8 @@
         </div>
       </a>      
     </li>
-    <li>
-        <a href="/" class="card">
-          <img src="../emona.png" class="card__image" alt="" />
-          <div class="card__overlay">
-            <div class="card__header">                   
-              <img class="card__thumb" src="../emona.png" alt="" />
-              <div class="card__header-text">
-                <h3 class="card__title">PORTFOLIO</h3>            
-                <span class="card__status">endterm assessment</span>
-              </div>
-            </div>
-            <p class="card__description">Welkom op mijn portfolio website!</p>
-          </div>
-        </a>      
-      </li>
-      <li>
-        <a href="/" class="card">
-          <img src="../emona.png" class="card__image" alt="" />
-          <div class="card__overlay">
-            <div class="card__header">                   
-              <img class="card__thumb" src="../emona.png" alt="" />
-              <div class="card__header-text">
-                <h3 class="card__title">PORTFOLIO</h3>            
-                <span class="card__status">endterm assessment</span>
-              </div>
-            </div>
-            <p class="card__description">Welkom op mijn portfolio website!</p>
-          </div>
-        </a>      
-      </li>
-      <li>
-        <a href="/" class="card">
-          <img src="../emona.png" class="card__image" alt="" />
-          <div class="card__overlay">
-            <div class="card__header">                   
-              <img class="card__thumb" src="../emona.png" alt="" />
-              <div class="card__header-text">
-                <h3 class="card__title">PORTFOLIO</h3>            
-                <span class="card__status">endterm assessment</span>
-              </div>
-            </div>
-            <p class="card__description">Welkom op mijn portfolio website!</p>
-          </div>
-        </a>      
-      </li>
-      <li>
-        <a href="/" class="card">
-          <img src="../emona.png" class="card__image" alt="" />
-          <div class="card__overlay">
-            <div class="card__header">                   
-              <img class="card__thumb" src="../emona.png" alt="" />
-              <div class="card__header-text">
-                <h3 class="card__title">PORTFOLIO</h3>            
-                <span class="card__status">endterm assessment</span>
-              </div>
-            </div>
-            <p class="card__description">Welkom op mijn portfolio website!</p>
-          </div>
-        </a>      
-      </li>
-      <li>
-        <a href="/" class="card">
-          <img src="../emona.png" class="card__image" alt="" />
-          <div class="card__overlay">
-            <div class="card__header">                   
-              <img class="card__thumb" src="../emona.png" alt="" />
-              <div class="card__header-text">
-                <h3 class="card__title">PORTFOLIO</h3>            
-                <span class="card__status">endterm assessment</span>
-              </div>
-            </div>
-            <p class="card__description">Welkom op mijn portfolio website!</p>
-          </div>
-        </a>      
-      </li>
+ 
+    <ul id="repos-container"></ul>
 </ul>
 
 <style>
