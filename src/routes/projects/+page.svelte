@@ -61,17 +61,6 @@ onMount(() => {
 
 </script>
 
-<section class="github-portfolio">
-	<section class="portfolio-title">
-		<h2>my work on github ✨</h2>
-	</section>
-	
-
-	<ul id="repos-container"></ul>
-</section>
-
-
-
 <div class="container">
 
 	<div class="intro">
@@ -90,7 +79,20 @@ onMount(() => {
 		</main>
 </div>
 
+<section class="github-portfolio">
+	<section class="portfolio-title">
+		<h2>my work on github ✨</h2>
+	</section>
+	
+
+	<ul id="repos-container"></ul>
+</section>
+
 <style>
+
+.github-portfolio {
+	background-color: blue;
+}
     * {
 	box-sizing: border-box;
 	margin: 0;
