@@ -1,5 +1,5 @@
 <script>
-  
+  import Card from "$lib/components/card.svelte";
 </script>
 
 <div class="container">
@@ -12,7 +12,7 @@
 			<div class="content">
 				<h1>GITHUB PROJECTS</h1>
 				<!-- Import Cards section -->
-			
+			<Card></Card>
 			</div>
 
 			<a class="button_more" href="/">Ga terug</a>
