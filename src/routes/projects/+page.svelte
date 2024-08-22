@@ -1,5 +1,4 @@
 <script>
-  import Card from "$lib/components/card.svelte";
 
 
   import { onMount } from 'svelte';
@@ -69,9 +68,15 @@ onMount(() => {
 
 		<main>
 			<div class="content">
-				<h1>GITHUB PROJECTS</h1>
 				<!-- Import Cards section -->
-			<Card></Card>
+				<section class="github-portfolio">
+					<section class="portfolio-title">
+						<h1>GITHUB PROJECTS</h1>
+					</section>
+					
+				
+					<ul id="repos-container"></ul>
+				</section>
 			</div>
 
 			<a class="button_more" href="/">Ga terug</a>
@@ -79,20 +84,10 @@ onMount(() => {
 		</main>
 </div>
 
-<section class="github-portfolio">
-	<section class="portfolio-title">
-		<h2>my work on github ✨</h2>
-	</section>
-	
 
-	<ul id="repos-container"></ul>
-</section>
 
 <style>
 
-.github-portfolio {
-	background-color: blue;
-}
     * {
 	box-sizing: border-box;
 	margin: 0;
