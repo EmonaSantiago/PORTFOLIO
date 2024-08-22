@@ -160,7 +160,6 @@
     
     .card__arc path {
       fill: var(--mid-blue);
-      d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
     }       
     
     .card:hover .card__header {
