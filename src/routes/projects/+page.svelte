@@ -45,11 +45,11 @@ h2 {
 	animation: fadeIn 2s ease forwards;
 }
 
-p {
+/* p {
 	font-size: 4rem;
 	opacity: 0;
 	animation: fadeInText 2s ease forwards 3s;
-}
+} */
 
 .intro {
 	height: 100vh;
@@ -113,9 +113,9 @@ main {
 	}
 }
 
-.btns_more {
+/* .btns_more {
 	margin-bottom: 2em;
-}
+} */
 
 
 

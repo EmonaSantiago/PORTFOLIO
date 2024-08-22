@@ -59,7 +59,7 @@ onMount(() => {
 
 </script>
 
-<ul class="cards">
+<!-- <ul class="cards">
     <li>
       <a href="/" class="card">
         <img src="../emona.png" class="card__image" alt="" />
@@ -77,8 +77,8 @@ onMount(() => {
     </li>
  
     <ul id="repos-container"></ul>
-</ul>
-
+</ul> -->
+<ul id="repos-container"></ul>
 <style>
 
     * {
@@ -137,18 +137,7 @@ onMount(() => {
       transition: .2s ease-in-out;
     }
     
-    .card__arc {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      bottom: 100%;
-      right: 0;      
-      z-index: 1;
-    }
-    
-    .card__arc path {
-      fill: var(--mid-blue);
-    }       
+
     
     .card:hover .card__header {
       transform: translateY(0);
@@ -167,12 +156,12 @@ onMount(() => {
       color: var(--beige-color);
     }
     
-    .card__tagline {
+    /* .card__tagline {
       display: block;
       margin: 1em 0; 
       font-size: .8em; 
       color: var(--beige-color);  
-    }
+    } */
     
     .card__status {
       font-size: .8em;
