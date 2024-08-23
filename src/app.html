@@ -26,26 +26,23 @@
 				flex-wrap: wrap;
 				gap: 1.25rem;
 				justify-content: center;
+
 			}
 
 			.repository{
 				background: var(--beige-color);
 				padding: 10px 20px;
 				width: 400px;
+				height: 200px;
 				border-radius: 20px;
-				display: grid;
-					grid:
-						"title" 0.5fr
-						"bio" 1fr
-						"button" 0.5fr
-						/ 1fr;
-					gap: 10px;
+				border: 10px solid var(--dark-blue);
 			}
 
 			.repository h3 {
 				color: var(--dark-blue); !important
 				grid-area: title;
-
+				font-weight: bolder;
+				text-transform: uppercase;
 			}
 
 			.repo-bio {
@@ -58,6 +55,20 @@
 				color: var(--lightGrey);
 				font-weight: 500;
 			}
+
+
+		h2 {
+			font-size: 32px;
+			font-weight: 700;
+			text-align: center;
+
+		}
+
+		h3 {
+			font-size: 24px;
+			font-weight: 500;
+
+		}
 
 
 
@@ -88,6 +99,15 @@
 		p {
 			color: var(--dark-blue);
 
+		}
+
+		article a {
+			font-size: 14px;
+		}
+
+		article p {
+			font-size: 16px;
+			font-weight: 400;
 		}
 
 
