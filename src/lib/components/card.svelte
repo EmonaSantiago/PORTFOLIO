@@ -37,14 +37,14 @@ onMount(() => {
 				repository.innerHTML = `
 				
 				
-					<h3><a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a></h3>
+					<h3 href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</h3>
 					
 					<section class="repo-bio">
 						<p>${repo.description || 'No description available.'} </p>
 					</section>
 
 					<section class="repo-button">
-						<a href="${repo.homepage}" target="_blank" class="live-button"> ${"Live Site" || 'no link available'} </a>
+						<a href="${repo.homepage}" target="_blank" class="live-button"> ${"PROJECT BEKIJKEN" || 'no link available'} </a>
 					</section>
 				
 

@@ -12,43 +12,27 @@
 </html>
 
 <style>
-			/* basics */
-		:root {
-				--lightPink: #F9DCE2;
-				--darkPink:  #ff7c9b;
-				--lightGrey: #f5f5f5;
-				--hoverPink: #FFBADD;
-				--textColor: #323232;
-				--dark-blue: #2F4156;
-				--mid-blue: #567C8D;
-				--light-blue: #C8D9E6;
-				--beige-color: #F5EFEB;
-				--white-color: #FFFF;
-			}
 
-
-
-			* {
-				padding: 0;
-				margin: 0;
-				font-family: "Poppins", sans-serif;
-				color: var(--beige-color);
-			}
-
+	:root {
+	   --dark-blue: #2F4156;
+	   --mid-blue: #567C8D;
+	   --light-blue: #C8D9E6;
+	   --beige-color: #F5EFEB;
+	   --white-color: #FFFF;
+	 }
 
 			#repos-container {
 				display: flex;
 				flex-wrap: wrap;
 				gap: 1.25rem;
 				justify-content: center;
-
 			}
 
 			.repository{
-				background: var(--dark-blue);
-				padding: 2em;
+				background: var(--beige-color);
+				padding: 10px 20px;
 				width: 400px;
-				border-radius: 1em;
+				border-radius: 20px;
 				display: grid;
 					grid:
 						"title" 0.5fr
@@ -59,12 +43,12 @@
 			}
 
 			.repository h3 {
-				color: var(--darkPink); !important
+				color: var(--dark-blue); !important
 				grid-area: title;
+
 			}
 
 			.repo-bio {
-
 				grid-area: bio;
 			}
 
@@ -98,10 +82,9 @@
 
 
 		.live-button {
-			padding: 15px;
-			background: var(--darkPink);
-
-			border-radius: 10px;
+			padding: 10px 20px;
+			background: var(--mid-blue);
+			border-radius: 20px;
 		}
 
 
@@ -118,16 +101,13 @@
 
 		a {
 			text-decoration: none;
-
+			text-transform: uppercase;
+			color: var(--beige-color);
 		}
 
-		article a {
-			font-size: 14px;
-		}
+		p {
+			color: var(--dark-blue);
 
-		article p {
-			font-size: 16px;
-			font-weight: 400;
 		}
 
 
