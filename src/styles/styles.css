@@ -19,6 +19,7 @@
   /* Texts styling */
 
 	h1 {
+    font-size: 8vw;
     margin: 1rem 0;
     color: var(--dark-blue);
     }
