@@ -13,83 +13,25 @@
 
 <style>
 
-	:root {
-	   --dark-blue: #2F4156;
-	   --mid-blue: #567C8D;
-	   --light-blue: #C8D9E6;
-	   --beige-color: #F5EFEB;
-	   --white-color: #FFFF;
-	 }
-
-			#repos-container {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 3em;
-				justify-content: center;
-				margin: 2em;
-			}
-
-			.repository{
-				background: var(--beige-color);
-				padding: 10px 20px;
-				width: 400px;
-				height: 200px;
-				border: 5px solid var(--dark-blue);
-			}
-
-			.repository:hover {
-				transform: scale(1.1);
-			}
-
-			.repository h3 {
-				color: var(--dark-blue); !important
-				grid-area: title;
-				font-weight: bolder;
-				text-transform: uppercase;
-			}
-
-			.repo-bio {
-				grid-area: bio;
-			}
-
-			.repo-button {
-				padding-top: 1em;
-				grid-area: button;
-				color: var(--lightGrey);
-				font-weight: 500;
-			}
-
+	/* styling github api */
+		:root {
+		   --dark-blue: #2F4156;
+		   --mid-blue: #567C8D;
+		   --light-blue: #C8D9E6;
+		   --beige-color: #F5EFEB;
+		   --white-color: #FFFF;
+		}
 
 		h2 {
-			font-size: 32px;
+			font-size: 6vw;
 			font-weight: 700;
 			text-align: center;
-
 		}
 
 		h3 {
 			font-size: 24px;
 			font-weight: 500;
-
 		}
-
-
-
-		.live-button {
-			padding: 10px 20px;
-			background: var(--mid-blue);
-		}
-
-
-		.live-button:hover {
-			background: var(--dark-blue);
-
-		}
-
-		path {
-			color: white;
-		}
-
 
 		a {
 			text-decoration: none;
@@ -99,39 +41,52 @@
 
 		p {
 			color: var(--dark-blue);
-
 		}
 
-		article a {
-			font-size: 14px;
+		#repos-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 3em;
+			justify-content: center;
+			margin: 2em;
 		}
 
-		article p {
-			font-size: 16px;
-			font-weight: 400;
+		.repository{
+			background: var(--beige-color);
+			padding: 10px 20px;
+			width: 400px;
+			height: 200px;
+			border: 5px solid var(--dark-blue);
 		}
 
+		.repository:hover {
+			transform: scale(1.1);
+		}
 
-		.invalid-feedback,
-	      .empty-feedback {
-	        display: none;
-	      }
+		.repository h3 {
+			color: var(--dark-blue); !important
+			grid-area: title;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
 
-	      .was-validated :placeholder-shown:invalid ~ .empty-feedback {
-	        display: block;
-	      }
+		.repo-bio {
+			grid-area: bio;
+		}
 
-	      .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
-	        display: block;
-	      }
+		.repo-button {
+			padding-top: 1em;
+			grid-area: button;
+			color: var(--lightGrey);
+			font-weight: 500;
+		}
 
-	      .is-invalid,
-	      .was-validated :invalid {
-	        border-color: #dc3545;
-	      }
+		.live-button {
+			padding: 10px 20px;
+			background: var(--mid-blue);
+		}
 
-	      .is-invalid,
-	      .was-validated :invalid:focus {
-	    --tw-ring-color: rgba(220, 53, 69, 0.2);
-	}
+		.live-button:hover {
+			background: var(--dark-blue);
+		}
 </style>

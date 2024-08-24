@@ -27,7 +27,7 @@
     h2 {
     color: white;
     opacity: 0;
-    font-size:5vw;
+    font-size:8vw;
     animation: fadeIn 2s ease forwards;
   }
 
@@ -157,6 +157,12 @@
     width: 100%;
     text-align: center;
     overflow-y: auto;
+    
+  }
+
+  .introduction_projects {
+    line-height: 1;
+    margin: 0 2em 0 2em;
   }
 
   main {
@@ -253,4 +259,11 @@
   p {
     margin-bottom: 2em;
   }
+
+  .introduction_projects {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+
 }
