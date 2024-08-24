@@ -20,9 +20,3 @@
 
 </div>
 
-
-<style>
-/* Global styling */
-	
-</style>
-
