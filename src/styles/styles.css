@@ -1,8 +1,11 @@
+/* Global styling*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Inknut Antiqua;
+    border-radius: 20px;
   }
   
   :root {
@@ -13,17 +16,53 @@
     --white-color: #FFFF;
   }
 
-  /* Animatie  */
-  .first-page-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    z-index: -10;
-    background-color: var(--beige-color);
+  /* Texts styling */
+
+	h1 {
+    margin: 1rem 0;
+    color: var(--dark-blue);
+    }
+  
+    h2 {
+    color: white;
+    opacity: 0;
+    font-size:5vw;
+    animation: fadeIn 2s ease forwards;
   }
+
+  p{
+    line-height: 28px;
+    transform: translateY(300px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+    font-family: inika;
+  }
+
+  /* Image styling */
+
+
+  /* Home Page */
+
+  .name {
+    font-family: Inknut Antiqua;
+    color: var(--mid-blue);
+    margin-bottom: 10px;
+    transform: translateY(100px);
+    animation: slideUp .8s ease forwards .5s;
+    font-size:10vw;
+}
+
+.name span {
+  color: var(--beige-color);
+}
+
+.introduction {
+  height: auto;
+  overflow: hidden;
+}
+
+.introduction p {
+  color: var(--beige-color);
+}
   
   .container {
     color: var(--beige-color);
@@ -58,25 +97,7 @@
     animation: slideIn 1.5s ease-in-out forwards;
   }
   
-  .introduction {
-    height: auto;
-    overflow: hidden;
-  }
 
-  .introduction p {
-    color: var(--beige-color);
-  }
-
-  img {
-    border-radius: 50px;
-  }
-
-  p{
-    line-height: 28px;
-    transform: translateY(300px);
-    animation: slideUp .8s ease-in-out forwards .8s;
-    font-family: inika;
-  }
 
  /* Media Query for Laptops and Desktops */
  @media (min-width: 1025px) {
@@ -94,7 +115,19 @@
   .button_more {
     text-decoration: none;
     background: var(--dark-blue);
-    border-radius: 50px;
+    color: var(--beige-color);
+    font-size: 16px;
+    position: relative; 
+    transform: translateY(50px);
+    animation: slideUp .8s ease-in-out  forwards 1s;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .button_more_home {
+    text-decoration: none;
+    background: var(--mid-blue);
     color: var(--beige-color);
     font-size: 16px;
     position: relative; 
@@ -110,16 +143,9 @@
     height: auto;
   }
   
-  h1 {
-      font-family: Inknut Antiqua;
-      color: var(--beige-color);
-      margin-bottom: 10px;
-      transform: translateY(100px);
-      animation: slideUp .8s ease forwards .5s;
-      font-size:10vw;
-  }
+ 
 
-  h1 span {
+  h1 {
     color: var(--dark-blue);
   }
 
@@ -150,3 +176,86 @@
     }
   }
   
+
+  
+
+.container {
+	background-color: var(--dark-blue);
+}
+
+
+.intro {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--light-blue);
+	transform: scale(0, 0);
+	animation: animate 1s ease-in forwards 2s;
+	overflow: hidden;
+}
+
+.content {
+	width: 100%;
+	text-align: center;
+	overflow-y: auto;
+}
+
+
+  /* Animatie  */
+  .first-page-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -10;
+    background-color: var(--beige-color);
+  }
+
+
+@keyframes animate {
+	0% {
+		transform: scale(0, 0.005);
+	}
+	50% {
+		transform: scaleY(0.005);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(-50%);
+	}
+}
+
+@keyframes fadeInText {
+	from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}

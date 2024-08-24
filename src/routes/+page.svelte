@@ -2,7 +2,7 @@
     <div class="container_content">
           <div class="container_content_text">
               <div class="title">
-                  <h1><span>Emona</span> Santiago</h1>
+                  <h1 class="name"><span>Emona</span> Santiago</h1>
               </div>
               <div class="introduction">
                 <p>
@@ -10,7 +10,7 @@
                 </p>
               </div>
               <div class="button">
-                  <a class="button_more" href="/projects" >Ga verder</a>
+                  <a class="button_more_home" href="/projects" >Ga verder</a>
               </div>
           </div>
     </div>
