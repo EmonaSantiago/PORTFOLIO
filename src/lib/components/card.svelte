@@ -6,8 +6,6 @@
 
 onMount(() => {
 
-		// GitHub API laat maar 30 zien bij default
-		// Verander username
 			const apiUrl = `https://api.github.com/users/EmonaSantiago/repos?sort=updated&per_page=50`;
 
 	
@@ -17,16 +15,11 @@ onMount(() => {
 			repos = repos.map((repo) => {
 				return {
 					...repo,
-					name: repo.name.replace(/-/g, ' ') // deze line zorgt ervoor dat er spaties staan ipv - 
+					name: repo.name.replace(/-/g, ' ') 
 				};
 			});
 
-				// Haal de volgende regel weg om alle repo's te krijgen op de website, wil je dit niet dan kan je de beste repo's een ster
-				// geven zodat je alleen die ziet :) 
-
 			repos = repos.filter((repo) => repo.stargazers_count > 0);
-
-			// Sorteert het werk van hoog naar laag ster
 
 			repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
