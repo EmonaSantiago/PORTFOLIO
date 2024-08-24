@@ -41,7 +41,7 @@ h1 {
 h2 {
 	color: white;
 	opacity: 0;
-	font-size: 5rem;
+	font-size:5vw;
 	animation: fadeIn 2s ease forwards;
 }
 
